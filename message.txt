@@ -1,0 +1,13 @@
+DUMMY
+created .dockerignore so that local modules and local debug files are not copied
+
+# building your image
+docker build -t michaelintx/node-web-app .
+
+
+# run docker image for testing (short lived)
+# using external NIC port 80 and internal docker port 3000
+docker container run --rm -p 8080:3000 michaelintx/node-web-app
+
+# use following run to shut down server with CTRL-CTRL
+docker container run --rm -p 8080:3000 --init -it michaelintx/node-web-app
