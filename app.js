@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+
+const errorController = require('./controller/error_controller');
+
 const app = express();
 
 //set view engine to EJS - dynamic pages
@@ -21,10 +24,6 @@ app.use('/admin',adminRoutes);
 app.use(publicRoutes);
 
 // no fitting of any router path ->catch all error 
-app.use((req, res, next) => {
-  res.status(404).render('404',{
-    pageTitle: 'Page Not Found',
-    path: 'unknown'});
-});
+app.use(errorController.get404error); 
 
 app.listen(3000);
