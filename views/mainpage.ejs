@@ -1,9 +1,42 @@
 <%- include('./includes/head.ejs') %>
-    </head>
+    
     <body>
+        <!-- Top Navigation-->
         <%- include('./includes/navigation.ejs') %> 
-    <main>
-        <h1>My Main Page</h1>
-        <p>List of all the shared projects ...</p>
-    </main>
+        <!-- Sidebar -->
+        <%- include('./includes/sidebar.ejs') %>  
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">KEEP IT SIMPLE</h1>
+        <div class="scout-center">
+          <h2>KEEP IT SIMPLE</h2>
+          <p>This page is not fancy and does not have the 'current' fashion look and feel. That is not my intention
+            and not the purpose of this web side. I want to provide straight forward answers or at least provide ideas how to you 
+            approach it.<br> 
+          </p>
+          <p>All topics added to this page are part of my hobby. Believe me that I had my fair share of hours of leasson learned for
+            each single topic. But completing it is most rewarding.<br>
+          </p>
+          <p>Thie code for this web application is written in simple NodeJs/Express using Template engine EJS. Pages are mostly static
+            and application is running on Docker Container. Straight forward and simple. <br>You can access the code 
+            even on GitHub.<br></p>
+          <p><strong>Have fun with Project you start!</strong></p>
+          <p>Please contact me if you have found any issue or improvement. Looking forward hearing from you!<br></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+          <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/USSTexasMachineRoom.jpeg" 
+            alt="USS Texas" width="200" height="300"><br>USS Texas <br>Machine Room Control</image></p>
+      </div>
+
+    </div>
+    <%- include('./includes/footer.ejs') %>
+</div>
      <%- include('./includes/end.ejs') %>

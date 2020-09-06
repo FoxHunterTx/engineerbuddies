@@ -7,7 +7,11 @@ const privateController = require('../controller/private_controller');
 
 
 router.get('/baking/yeastwater',publicController.getBakingYeastWater); 
+router.get('/baking/sourdough',publicController.getBakingSourDough); 
+
 router.get('/google/iot',publicController.getGCPiot);
+router.get('/google/gck',publicController.getGCPgck);
+
 router.get('/familyandfriends/familymainpage',privateController.getFamilyMainPage);
 
 router.get('/', publicController.getMainPage);

@@ -2,8 +2,18 @@
     </head>
     <body>
         <%- include('./includes/navigation.ejs') %> 
-    <main>
-        <h1>Google Cloud Platform - Internet of Things</h1>
+        <!-- Sidebar -->
+        <%- include('./includes/sidebar-google.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Google Cloud Platform - Internet of Things</h1>
+        
         </b>      
         1. IoT Core 
 	create registry
@@ -12,5 +22,8 @@
 
 	topics: projects/tutorial-lab-286213/topics/backyard
 
-    </main>
+    </div>
+  </div>
+  <%- include('./includes/footer.ejs') %>
+</div>
  <%- include('./includes/end.ejs') %>

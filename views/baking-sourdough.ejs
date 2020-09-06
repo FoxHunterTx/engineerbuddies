@@ -1,0 +1,71 @@
+<%- include('./includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('./includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('./includes/sidebar-baking.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Baking Bread with SourDough</h1>
+        <h2>Sour Dough Content</h2>
+        <ul>
+          <li><a href="#make">Sour Dough - Make Sour Doug Starter</a></li>
+          <li><a href="#bake">Sour Dough - Bread Recipe</a></li>
+          <li><a href="#refrig">Sour Dough - Refrigerate Sour Dough Starter</a></li> 
+          <li><a href="#react">Sour Dough - Reactivate Sour Dough from Refrigerator</a></li> 
+        </ul>
+
+      <br>  
+      <h3 id="make"><a name=“make”><br></a></h3>
+      <h3>How to make a Sour Dough Starter</h3>
+      get started: <br>
+      <p>Some notes: <br> Please use only unbleached flour<br>Please use only filtered water [no chlorine]</p>
+      <p>Would recommend to use a glass bowl to see progress,</p>
+      <p>Important: Please do not get incouraged when you do not see much activity for a coulple of days. It still will work
+        out. Also the water on the top is not bad, it is called 'Hooch' and it is a collection of water created during 
+        the process when the yeast has not 'food' anymore. Just feed more flour and same amount of water. That will take 
+        care of it.
+      </p>
+      <p>Day is asking for feeding the starter every 12 hours. Do not need to do it clock wise means
+        8 hours or 14 hours is fine as long the starter is not neglected.
+      </p>
+
+        <ol>
+          <dt><strong>Day 1</strong></dt><dd>mix 1/2 cup of flour with 1/2 cup of water and set aside. Best with lid layed on top not closed.</dd>
+          <dt><strong>Day 2</strong></dt><dd>just ventilate (open lid and let it breath for some minutes)</dd>
+          <dt><strong>Day 3</strong></dt><dd>1. Remove half of the sour dough starter.</dd><dd>2. Feed the other half again with 1/2 cup of flour and 
+            1/2 cup of water.</dd>
+          <dt><strong>Day 4</strong></dt><dd>Note: Start feeding every 12 hours</dd><dd>1. Remove half of the sour dough starter.</dd><dd>2. Feed the other half again with 1/2 cup of flour and 
+            1/2 cup of water.</dd>
+          <dt><strong>Day 5</strong></dt><dd>Note: Start feeding every 12 hours</dd><dd>Dough might does not smell like yeast yet but that is normal</dd>
+             <dd>1. Remove half of the sour dough starter.</dd><dd>2. Feed the other half again with 1/2 cup of flour and 
+              1/2 cup of water.</dd>
+        </ol><br>
+
+        <h3 id="bake"><a name=“bake”>How to bake a bread with the Sour Dough Starter</a></h3>
+        get started: </b>
+        <p>1 more info</p>
+        <p>2 more info</p>
+        <p>3 more info</p>
+        <p>4 more info</p>
+
+        <h3 id="refrig"><a name=“refrig”>How to refrigerate the Sour Dough Starter</a></h3>
+          get started: </b>
+          <p>1 more info</p>
+          <p>2 more info</p>
+
+        <h3 id="react"><a name=“react”>How to reactivate your refrigerated Sour Dough Starter</a></h3>
+          get started: </b>
+          <p>1 more info</p>
+          <p>2 more info</p>  
+    </div>
+  </div>
+  <%- include('./includes/footer.ejs') %>
+</div>
+ <%- include('./includes/end.ejs') %>
