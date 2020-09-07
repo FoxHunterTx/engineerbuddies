@@ -6,6 +6,8 @@ const privateController = require('../controller/private_controller');
 //const rootDir = require('../util/path');
 
 
+router.get('/nav/contact',publicController.getContactMePage); 
+
 router.get('/baking/yeastwater',publicController.getBakingYeastWater); 
 router.get('/baking/sourdough',publicController.getBakingSourDough); 
 

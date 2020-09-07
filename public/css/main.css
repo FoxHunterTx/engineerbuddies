@@ -10,3 +10,8 @@ footer {
 .scout-center {
     text-align: center;
 }
+
+.scout-first-letter::first-letter {
+    font-size: 130%;
+    font-weight: bold;
+}

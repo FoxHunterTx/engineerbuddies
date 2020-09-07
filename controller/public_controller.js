@@ -34,7 +34,12 @@ exports.getMainPage = (req, res, next) => {
     });
   };
 
-
+  exports.getContactMePage = (req, res, next) => {
+    res.render('contactme',{
+      pageTitle: 'EngineerBuddies ContactMe',
+      path: '/nav/contact'
+    });
+  };
 
 
 
