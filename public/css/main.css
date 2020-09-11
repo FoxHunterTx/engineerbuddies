@@ -15,3 +15,7 @@ footer {
     font-size: 130%;
     font-weight: bold;
 }
+
+.scout-command-background {
+    background: lightgrey;
+}

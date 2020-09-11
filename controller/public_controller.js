@@ -12,6 +12,12 @@ exports.getBakingYeastWater = (req, res, next) => {
     });
   };
 
+  exports.getSecureSSL = (req, res, next) => {
+    res.render('secure-ssl',{
+      pageTitle: 'SSL/TLS Certificate',
+      path: '/secure/ssl'
+    });
+}; 
 
   exports.getGCPiot = (req, res, next) => {
     res.render('google-iot',{

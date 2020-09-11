@@ -1,0 +1,91 @@
+<%- include('./includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('./includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('./includes/sidebar-secure.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Keep it Simple but Secure</h1>
+        <h2>SSL/TLS certificate</h2>
+        <p><SSL or better the evolved version from SSL - TLS (Transport Layer Security) is a widely adopted security protocol.
+            It protects data communication between two parties. Nowadays, it is crucial to protect your data in transit in the same way as you protect your data at rest. /p>
+        <h3>A basic overview for a One-Way SSL connection</h3> 
+        <p>There is so much information in the Internet that I won’t go into much details.
+          During a TLS handshake, the two communicating sides exchange messages to acknowledge each other, verify each 
+          other and establish the encryption algorithm that is used for this session. 
+          <br><strong>Diffie Hellman is using a different algorithm to calculate the pre-master secret (see step d.).</strong>
+        </p><br><br>
+        
+        <h4>SSL/TLS Flow</h4>
+        <p>When the client (most likely a browser) is sending its SSL request message to the server side, the TCP 
+            handshake has already been successful completed. 
+        </p>
+        <ol type="1">
+            <li>The client sends any encrypted data to the destination in plain text. Initiating the ssl handshake.</li>
+            <li>The server responses with a plain text message and its public SSL certificate, cipher suggestion and important ‘a random string’</li>
+            <li>The client uses the received Server SSL certificate and verifies it with the CA that signed that certificate. Most likely via truststore. If verified that the server is the domain the client wants to communicate with, it trusts the communication (this session).</li>
+            <li>When step c. result is ‘trust’s server’ then the client is sending another random string to the server but this time encrypted with the server’s SSL certificate key.  Note that this message can only be decrypted with the correct private key. (premaster secret)</li>
+            <li>The server is decrypting the received message from the client. Then starts to generate the session key using the ‘server random string’ and the ‘decrypted client random string’</li>
+            <li>At the same time as the server e) starts to generate the session key using the ‘server random string’ and the ‘decrypted client random string’ the client generates its session key. </li>
+            <li>Both (client and server) session keys should match when using the exchanged random strings and the approved on ‘cipher’.</li>
+            <li>Client sends ‘finished’ message to server.</li>
+            <li>Server sends ‘finished’ message to client.</li>
+            <li>Now - the secure Symmetric encryption - encrypts all exchanged messages.</li>
+          </ol> <br><br>    
+        
+        <h3>How do you start to get your own certificate!</h3>
+        <p>
+          <strong>Preliminary:</strong>
+          <ul>
+            <li>Understand what certificate format you need. Like containers have different runtimes (Java, Python etc) certificates have different presentations. Formats like  .pem, . Pkcs12 (same as .pfx or .p12).</li>
+            <li>Install Openssl or similar application on your device.</li>
+          </ul>
+        </p><br><br>
+        
+        <h3>Self Signed Certificate Command</h3>
+        Create a private key and a self signed public certifiacte. Run following command on 
+        your server or laptop on which you want to use the cert/key pair.
+        <div class=scout-command-background>
+          <p>
+            <strong>Command: </strong>openssl req  -newkey rsa:2048 -nodes -keyout yourPrivateKey.key -x509 -sha256 -days 365 -out yourPublicCert.crt
+          </p>
+        </div><br><br>
+
+        <h3>Create CSR for Certificate Authority</h3>
+        Create CSR that can be used to be signed by certificate authority CA
+        <div class=scout-command-background>
+          <p>
+            <strong>Command: </strong>openssl req -newkey rsa:2048 -nodes -keyout yourPrivateKey.key -sha256 -out yourCSR.csr
+          </p>
+        </div>  
+        <p>Send only the CSR to the CA of your choice. The CSR contains the public certificate and the public key. 
+           <strong>Note: The private key shall never be shared with anyone/anytime.</strong>
+        </p>
+
+        <br><br>
+        <h4>Openssl arguments:</h4>
+        <ol>
+          <dt><strong>-req </strong></dt><dd>creates and processes certivates requests in PKCS#10</dd>
+          <dt><strong>-x509</strong></dt><dd>outputs a self signed certificate instead of a certificate signing request</dd>
+          <dt><strong>-nodes</strong></dt><dd>means no DES and specified that a private key is not encrypted</dd>
+          <dt><strong>-new</strong></dt><dd>generates a new certificate request. Ti will prompt the user for the relevant fields.</dd>
+          <dt><strong>-newkey</strong></dt><dd>creates a new certificate request and new private key. rsa:nbits generates an RSA key n-bits in size</dd>
+          <dt><strong>-days</strong></dt><dd>when -x509 option is being used this specifies the number of days to certify the certificate for.</dd>
+        </ol>
+
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/lock.jpeg" 
+          alt="old fashion lock" width="200" height="300"><br>Secure<br>Old fasion lock</image></p>
+    </div>
+  </div>
+  <%- include('./includes/footer.ejs') %>
+</div>
+ <%- include('./includes/end.ejs') %>

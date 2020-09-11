@@ -11,6 +11,8 @@ router.get('/nav/contact',publicController.getContactMePage);
 router.get('/baking/yeastwater',publicController.getBakingYeastWater); 
 router.get('/baking/sourdough',publicController.getBakingSourDough); 
 
+router.get('/secure/ssl',publicController.getSecureSSL);
+
 router.get('/google/iot',publicController.getGCPiot);
 router.get('/google/gck',publicController.getGCPgck);
 
