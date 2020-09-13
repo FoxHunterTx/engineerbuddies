@@ -19,6 +19,13 @@ exports.getBakingYeastWater = (req, res, next) => {
     });
 }; 
 
+exports.getSecureMVC = (req, res, next) => {
+  res.render('secure-mvc',{
+    pageTitle: 'MVC Architecture',
+    path: '/secure/mvc'
+  });
+}; 
+
   exports.getGCPiot = (req, res, next) => {
     res.render('google-iot',{
       pageTitle: 'Google Cloud Platform - IoT',

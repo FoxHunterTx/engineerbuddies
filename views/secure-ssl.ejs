@@ -21,8 +21,14 @@
           During a TLS handshake, the two communicating sides exchange messages to acknowledge each other, verify each 
           other and establish the encryption algorithm that is used for this session. 
           <br><strong>Diffie Hellman is using a different algorithm to calculate the pre-master secret (see step d.).</strong>
-        </p><br><br>
+        </p><br>
+        <strong>Page links:</strong>
+        <ul>
+          <li><a href="#flow">SSL/TLS Flow</a></li>
+          <li><a href="#own">Get your own certificate</a></li>
+        </ul>
         
+      <h3 id="flow"></h3><br><br>
         <h4>SSL/TLS Flow</h4>
         <p>When the client (most likely a browser) is sending its SSL request message to the server side, the TCP 
             handshake has already been successful completed. 
@@ -38,8 +44,11 @@
             <li>Client sends ‘finished’ message to server.</li>
             <li>Server sends ‘finished’ message to client.</li>
             <li>Now - the secure Symmetric encryption - encrypts all exchanged messages.</li>
-          </ol> <br><br>    
-        
+          </ol>
+        <br>
+        <image src="/images/ssl-flow.png" alt="Model-View-Controller" width="700" height="700"><br>
+      
+          <h3 id="own"></h3><br><br>  
         <h3>How do you start to get your own certificate!</h3>
         <p>
           <strong>Preliminary:</strong>

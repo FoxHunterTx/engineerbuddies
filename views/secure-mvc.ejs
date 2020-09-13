@@ -1,0 +1,48 @@
+<%- include('./includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('./includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('./includes/sidebar-secure.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Model-View-Controller Architecture</h1>
+        <h3>Why?</h3>
+        <p>I am using MVC architecture for my web page project as it allows me to separates different aspects of the 
+            application while providing loose coupling between the used logics and element (like views).
+            Below is how I implemented the MVC Architecture into my nodejs project.
+        </p><br>
+
+        <image src="/images/MVC.png" alt="Model-View-Controller" width="700" height="400"><br>
+      <br> 
+      <p>
+        <strong>ROUTES: </strong>Forewards all incoming request to appropriate controller funtion.
+      </p>
+      <p>
+        <strong>CONTROLLER: </strong>Handles interaction from the user via Routes, request data from
+        Model and renders the correct View. The View only displays the data in the controller 
+        identified format, the Controller handles and interact to the users input.
+    </p>
+      <p>
+        <strong>MODELS: </strong>Represents the structure of data, the format and the constrains. Determines
+        what data needs to be stored in my database. 
+    </p>
+    <p>
+        <strong>VIEWS: </strong>Data presented to user. View uses the model and presents data in a form
+        in which the user will see it based on your logic. 
+    </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/MVC-Side.png" 
+        alt="USS Texas" width="150" height="150"><br>MVC <br>Model-View-Controller/image></p>
+    </div>
+  </div>
+  <%- include('./includes/footer.ejs') %>
+</div>
+ <%- include('./includes/end.ejs') %>
