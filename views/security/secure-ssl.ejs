@@ -1,9 +1,9 @@
-<%- include('./includes/head.ejs') %>
+<%- include('../includes/head.ejs') %>
     </head>
     <body>
-        <%- include('./includes/navigation.ejs') %> 
+        <%- include('../includes/navigation.ejs') %> 
         <!-- Sidebar -->
-        <%- include('./includes/sidebar-secure.ejs') %>  
+        <%- include('../includes/sidebar-secure.ejs') %>  
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
 
@@ -35,12 +35,20 @@
         </p>
         <ol type="1">
             <li>The client sends any encrypted data to the destination in plain text. Initiating the ssl handshake.</li>
-            <li>The server responses with a plain text message and its public SSL certificate, cipher suggestion and important ‘a random string’</li>
-            <li>The client uses the received Server SSL certificate and verifies it with the CA that signed that certificate. Most likely via truststore. If verified that the server is the domain the client wants to communicate with, it trusts the communication (this session).</li>
-            <li>When step c. result is ‘trust’s server’ then the client is sending another random string to the server but this time encrypted with the server’s SSL certificate key.  Note that this message can only be decrypted with the correct private key. (premaster secret)</li>
-            <li>The server is decrypting the received message from the client. Then starts to generate the session key using the ‘server random string’ and the ‘decrypted client random string’</li>
-            <li>At the same time as the server e) starts to generate the session key using the ‘server random string’ and the ‘decrypted client random string’ the client generates its session key. </li>
-            <li>Both (client and server) session keys should match when using the exchanged random strings and the approved on ‘cipher’.</li>
+            <li>The server responses with a plain text message and its public SSL certificate, cipher suggestion and important 
+              ‘a random string’</li>
+            <li>The client uses the received Server SSL certificate and verifies it with the CA that signed that certificate. 
+              Most likely via truststore. If verified that the server is the domain the client wants to communicate with, it 
+              trusts the communication (this session).</li>
+            <li>When step 3. result is ‘trust’s server’ then the client is sending another random string to the server but this 
+               encrypted with the server’s SSL certificate key.  Note that this message can only be decrypted with the correct 
+               private key. (premaster secret)</li>
+            <li>The server is decrypting the received message from the client. Then starts to generate the session key using 
+              the ‘server random string’ and the ‘decrypted client random string’</li>
+            <li>At the same time as the server e) starts to generate the session key using the ‘server random string’ and 
+              the ‘decrypted client random string’ the client generates its session key. </li>
+            <li>Both (client and server) session keys should match when using the exchanged random strings and the 
+              approved on ‘cipher’.</li>
             <li>Client sends ‘finished’ message to server.</li>
             <li>Server sends ‘finished’ message to client.</li>
             <li>Now - the secure Symmetric encryption - encrypts all exchanged messages.</li>
@@ -92,9 +100,9 @@
     </div>
     <div class="w3-third w3-container">
         <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/lock.jpeg" 
-          alt="old fashion lock" width="200" height="300"><br>Secure<br>Old fasion lock</image></p>
+          alt="old fashion lock" width="200" height="300"><br>Secure<br>Old fashion lock</image></p>
     </div>
   </div>
-  <%- include('./includes/footer.ejs') %>
+  <%- include('../includes/footer.ejs') %>
 </div>
- <%- include('./includes/end.ejs') %>
+ <%- include('../includes/end.ejs') %>

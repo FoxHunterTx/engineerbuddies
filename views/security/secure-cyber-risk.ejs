@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('../includes/sidebar-cyber.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Keep it Simple but Secure</h1>
+        <h2>Security Risk Management</h2>
+            <p>Any event that leads to an interruption of a service caused by any security 
+                related issue  followed by financial loss and damage to the organizational 
+                reputation is considered a security risk.
+            </p>
+            <p>
+            Security risk management is used to minimize any service interruption - technology 
+            related including to avoid harm to people. 
+            </p>
+            <p>It is important to understand that the risk minimization is a concern for the entire 
+                company hence the Risk Management is driven by company wide policies and not only by 
+                projects. It is a highly complex process that is owned by the companies security team and 
+                lead by the C-suite. </p>
+            <p>Note: DevOps and IT is implementing the framework determined by the companies risk 
+                management team but are not responsible for the framework. IT is not the risk owner.
+            </p>
+            <p>What is the goal?</p>
+            <p>Protecting the organizations sensitive information.</p>    
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/lock.jpeg" 
+          alt="old fashion lock" width="200" height="300"><br>Secure<br>Old fashion lock</image></p>
+    </div>
+  </div>
+  <%- include('../includes/footer.ejs') %>
+</div>
+ <%- include('../includes/end.ejs') %>

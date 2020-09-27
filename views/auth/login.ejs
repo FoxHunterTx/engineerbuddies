@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/auth.css">
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('../includes/sidebar.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Login Page</h1>
+        <h2>Please add your credentials</h2>
+        <form class="login-form" action="/login" method="POST">
+              <label for="email">
+                <span>E-Mail</span><input type="email" name="email" id="email">
+              </label>
+              <label for="password">
+                <span>Password</span><input type="password" name="password" id="password">
+              </label>
+          <span> </span><input type="submit" value="login" />
+      </form>
+    
+      </div>
+      <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/sun-tree.jpeg" 
+          alt="Login" width="200" height="300"><br>My<br>Login Page</image></p>
+      </div>
+  </div>
+  <%- include('../includes/footer.ejs') %>
+</div>
+ <%- include('../includes/end.ejs') %>

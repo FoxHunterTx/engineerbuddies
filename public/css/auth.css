@@ -1,0 +1,56 @@
+.login-form {
+  width: 450px;
+  font-size: 16px;
+  background: #00695c;;
+  padding: 30px 30px 15px 30px;
+  border: 5px solid #53687E
+  }
+
+.login-form input[type=submit],
+.login-form input[type=email],
+.login-form input[type=text],
+.login-form input[type=button],
+.login-form input[type=password],
+.login-form label {
+    font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #fff;
+  }
+
+.login-form label {
+	display:block;
+	margin: 10px 0px 10px 0px;
+}
+
+.login-form > span {
+	display: inline-block;
+	float: left;
+	width: 150px;
+}
+
+.login-form input[type=text],
+.login-form input[type=email],
+.login-form input[type=password] 
+{
+	background: transparent;
+	border: none;
+	border-bottom: 1px dashed #83A4C5;
+	margin-left: 10px;
+	width: 275px;
+	outline: none;
+	padding-bottom: 0px;
+	font-style: italic;
+}
+
+.login-form input[type=submit],
+.login-form input[type=button]{
+	background: #576E86;
+	border: none;
+	padding: 8px 10px 8px 10px;
+	border-radius: 5px;	
+}
+
+.login-form input[type=submit]:hover,
+.login-form input[type=button]:hover{
+background: #394D61; 
+}

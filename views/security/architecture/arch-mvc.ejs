@@ -1,9 +1,9 @@
-<%- include('./includes/head.ejs') %>
+<%- include('../../includes/head.ejs') %>
     </head>
     <body>
-        <%- include('./includes/navigation.ejs') %> 
+        <%- include('../../includes/navigation.ejs') %> 
         <!-- Sidebar -->
-        <%- include('./includes/sidebar-secure.ejs') %>  
+        <%- include('../../includes/sidebar-home.ejs') %>  
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
 
@@ -19,7 +19,7 @@
             Below is how I implemented the MVC Architecture into my nodejs project.
         </p><br>
 
-        <image src="/images/MVC.png" alt="Model-View-Controller" width="700" height="400"><br>
+        <image src="../images/MVC.png" alt="Model-View-Controller" width="700" height="400"><br>
       <br> 
       <p>
         <strong>ROUTES: </strong>Forewards all incoming request to appropriate controller funtion.
@@ -39,10 +39,10 @@
     </p>
     </div>
     <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/MVC-Side.png" 
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/MVC-Side.png" 
         alt="USS Texas" width="150" height="150"><br>MVC <br>Model-View-Controller/image></p>
     </div>
   </div>
-  <%- include('./includes/footer.ejs') %>
+  <%- include('../../includes/footer.ejs') %>
 </div>
- <%- include('./includes/end.ejs') %>
+ <%- include('../../includes/end.ejs') %>

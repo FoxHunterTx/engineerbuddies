@@ -1,0 +1,32 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('../includes/sidebar-cyber.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Keep it Simple but Secure</h1>
+        <h2>Procedures vs. Policies</h2>
+        Before we dive into this topic, please let me clarify first what the difference is.<br>
+        Procedures are used to explain how to do a specific task, whereas policies are used to describe what the outcome / end result has to be.
+        Example: 
+        <strong>Policy</strong>: Security - change all user passwords in any environment every 
+        35 days.<br>
+        <strong>Procedure</strong> (step-by-step) : Security - 1. IT  Admin receives notification from the user A that his/her passwords expires in 10 days. 2.  User A created a ticket to request to extend the access to the system C 3. IT Admin requests permission to extend the password for user A from Project and DevOps leads…
+        </p>   
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="/images/lock.jpeg" 
+          alt="old fashion lock" width="200" height="300"><br>Secure<br>Old fashion lock</image></p>
+    </div>
+  </div>
+  <%- include('../includes/footer.ejs') %>
+</div>
+ <%- include('../includes/end.ejs') %>
