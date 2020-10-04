@@ -1,0 +1,185 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('../includes/sidebar-hamradio.ejs') %>   
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Antenna</h1>
+        <h2>Build your own dipole antenna - 2m and 70cm</h2>
+
+<h3>Introduction</h3>
+As the antenna is a major part of my hobby - Ham Radio, I wanted to understand how it works. 
+Started to read about E and H fields, impedance and polarization gain and much more - interesting but tiring over time. 
+So I started to build my own antenna and learned on the way. Much more rewarding.
+<br>
+Started with planning. <br><br>
+<strong>My project list: </strong>
+<ol type="1">
+  <li>What frequency do I need to use for 2m and 70 cm</li>
+  <li>Dipole antenna length</li>
+  <li>Tools</li>
+  <li>Material list</li>
+  <li>Build antenna</li>
+</ol>
+<br>
+<h3 class='scout-h3'>1. Calculate Frequency</h3>
+<p>
+The math for calculating the frequency in words: <br>
+<strong>Frequency is equal to the speed of light divided by the wavelength. </strong>
+</p>
+<p class='scout-indend-1'><strong>2m:</strong> f<sub>(2m)</sub> = 300*10<sup>3</sup>[m/s] / 2m = 150Mhz</p>
+<p class='scout-indend-1'><strong>70cm:</strong> f<sub>(70cm)</sub> = 300*10<sup>3</sup>[m/s] / 0.7m = 428.5MHz</p>
+<p>
+A dipole should be used for around a frequency of 3KHz to 300GHz. My frequencies of f=150MHz for 2m and 
+f=428.5MHz for 70cm are suitable for a dipole antenna.
+</p>
+Please note that &lambda; is used in literature for the wavelength. &lambda = c/f<br>
+<br>
+<h3 class='scout-h3'>2. Dipole antenna length</h3>
+<p>
+A dipole antenna is built by a conducting wire which is half wavelength long. The feeding (voltage) of the 
+dipole antenna is in the middle of the antenna. The reason for that is that the impedance falls to its lowest 
+in the middle. <br>Please also consider that the wavelength is slightly shorter in conductors than in plain
+air.
+</p>
+<p class='scout-indend-1'><strong>2m:</strong> f<sub>(2m)</sub> = Quarter wave length * full wave length = ¼ * 2m = 0.5m = 50cm = <strong>19.58 inches</strong>
+</p>
+<p class='scout-indend-1'><strong>70cm:</strong> f<sub>(70cm)</sub> = Quarter wave length * full wave length = ¼ * 0.7m = 17.5cm = <strong>6.88 inches</strong>
+</p><br><br>
+
+<h4><strong><u>Choose your frequency in 2m band</u></strong></h4>
+<p>The 2 meter band is from f<sub>(low)</sub> = 144MHz to f<sub>(high)</sub> = 148MHz.<br> 
+    <strong>My antenna should have a low Standing Wave Ratio (SWR) at f = 146MHz.</strong> <br>
+    That is based on to have a wider frequency range of usable channels up and down the spectrum [(144+148)MHz / 2 = 146MHz]
+</p>
+<ol>
+  <li>Wavelength of f=146MHz leads to a wavelength: &lambda;(<sub>146MHz</sub>)
+  =300*10<sup>3</sup>[m/s] / 146*10<sup>3</sup>[1/s]= <strong>2.054m</strong></li>
+  <li>Quarter wavelength in meters: 2.054m / 4 = <strong>0.5136m</strong></li>
+  <li>Length of the each dipole arm is: 0.5136m * 39.37 = <strong>20.22 inches</strong></li>
+</ol>
+<p>
+  The calculated length per antenna arm is 20.22 inches but please consider that this value
+  is a theoretical value and as mentioned above it is for the air. The used wire material, the feeding 
+  connection and the used cable will impact the length and it has to be adjusted during the test phase (NanoVNA).
+</p><br>
+
+<h3 class='scout-h3'>3. Tools</h3>
+<p>
+  The only tool I would recommend is a Vector Network Analyzer( VNA). That allows you to determine
+  the antenna's Standing Wave Ratio (SWR) pretty accurately for a cheap price. The newer versions allow you 
+  to connect the VNA to your laptop and use the browser as your output screen.
+  </p><br>
+  <h4><strong><u>Nano Vector Network Analyzer</u></strong></h4>
+<p>
+ Using the NanoVNA Edy555 with the latest firmware that allows you to measure frequncies from 50kHz to
+ 1.5GHz reliably. 
+</p>
+<a href="https://nanovna.com/">NanoVNA link</a>
+<br><br><br>
+<h3 class='scout-h3'>4. Material List</h3>
+<div class = "scout-list">
+  <ul>
+    <li>2x</li>
+    <li>2x</li>
+    <li>2x</li>
+    <li>2x</li>
+    <li>2x</li>
+    <li>4x</li>
+    <li>1/8’’ x 36’’</li>
+    <li>#10 16-14</li>
+    <li>#10x24x2.5’’</li>
+    <li>#10</li>
+    <li>#10x32</li>
+    <li>#10</li>
+    <li>Stainless steal rod</li>
+    <li>ring terminal/crimp on</li>
+    <li>machine screws</li>
+    <li>lock washers</li>
+    <li>wing nuts</li>
+    <li>flat washers</li>
+  </ul>
+</div>
+<p>
+  And you need:
+  <div class="scout-indend-2"> 
+  <ul>
+    <li class = 'scout-indend-2'>PVC pipe straight 1"</li>
+    <li class = 'scout-indend-2'>PVC pipe T-piece 1"</li>
+    <li class = 'scout-indend-2'>Cable - I used RG-8X with SO-259</li>
+    <li class = 'scout-indend-2'>I do not use a Choke or Balun</li>
+  </ul>
+</div>
+</p>
+
+
+<br>
+<h3 class='scout-h3'>5. Build antenna</h3>
+<p>The below picture shows how to bend the conductive wire so that it can be installed to the T-section
+  of the antenna. When the antenna is connected mechanically and electrically the first time it is time to test. 
+  Do not connect the antenna to your ham radio yet but start the initial testing with your device/tool that 
+  can measuere the Standing Wave Ratio of your antenna. Would recommend to measure it with the cable length 
+  you need and to use the same cable(feedline). <br>
+  I am using the 'NanoVNA' which is accurate enough for me.
+</p>
+<p>
+  <strong>Some measurements:</strong>
+  <ol type="I">
+    <li>Measurement for the antenna arm holes: I drilled the holes in the PVC T-pipe  1&frac34;inch apart. That
+  is around 44mm.</li>
+  <li>In order to have the SWR lower than 2:1 and keeping the impedance of the wire and antenna around 50&ohm;
+  the antenna arms for 2m were shortened to a length of 18&frac78; inches. The 70cm frequency was shortend 
+  to 6<sup>2</sup>&frasl;<sub>8</sub> inches.</li>
+</ol>
+</p>
+<p>
+  Please see picture on the right side. That are real picture during my project. 
+</p><br><br>
+    <image src="../images/dipole-antenna.png" alt="Antenna length" width="500" height="500"><br>
+      
+
+      <br><br>
+<h3 class='scout-h3'>Appendix</h3>
+  <p>
+    <ol type="I">
+      <li><strong>Impedance</strong><br>Impedance is the amount of resistance that a component offers to current flow in a circuit at 
+        a specific frequency.</li>
+      <li><strong>Standing Wave Ratio</strong><br>SWR is so imporant as the value connects the voltage and 
+      power, respectively that is reflected by the end terminal here the antenna. The higher the SWR the more
+      energy of the original signal is lost. <br>For example, a ratio of 1.5:1 already reflects 20% of the voltage with a power 
+      reflection of 4%. That is already a high loss for your signal. 
+      </li>
+    </ol>
+    
+  </p>
+
+
+    </div>
+    <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/antenna-parts.jpeg" 
+          alt="build your own antenna" width="200" height="300"><br>Dipole<br>All Used Parts</image></p>
+    </div>  
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/dipole-half.jpeg" 
+        alt="build your own antenna" width="200" height="300"><br>Dipole<br>Main Parts are completed</image></p>
+    </div> 
+    <div class="w3-third w3-container">
+    <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/dipole-outside.jpeg" 
+      alt="build your own antenna" width="200" height="300"><br>Dipole<br>Testing antenna</image></p>
+    </div>  
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/NanoVNA-2m.png" 
+        alt="build your own antenna" width="200" height="300"><br>Dipole<br>SWR output entire spectrum</image></p>
+    </div>  
+  </div>
+  <%- include('../includes/footer.ejs') %>
+</div>
+ <%- include('../includes/end.ejs') %>

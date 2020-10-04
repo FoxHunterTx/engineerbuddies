@@ -1,5 +1,31 @@
 const Users = require('../models/user');
 
+
+exports.getHamRadioMainPage = (req, res, next) => {
+  res.render('./hamradio/ham-mainpage',{
+    isAuthenticated: req.isLoggedIn,
+    pageTitle: 'Ham Radio Main',
+    path: '/hamradio/mainpage',
+  });
+};
+
+exports.getHamRadioBuildAntenna = (req, res, next) => {
+  res.render('./hamradio/ham-antennabuild',{
+    isAuthenticated: req.isLoggedIn,
+    pageTitle: 'Build your own',
+    path: '/hamradio/buildantenna',
+  });
+};
+
+exports.getHamRadioSwr = (req, res, next) => {
+  res.render('./hamradio/ham-swr',{
+    isAuthenticated: req.isLoggedIn,
+    pageTitle: 'Standing Wave Ratio',
+    path: '/hamradio/swr',
+  });
+};
+
+
 exports.getBakingYeastWater = (req, res, next) => {
     res.render('baking-yeastwater',{
       isAuthenticated: req.isLoggedIn,

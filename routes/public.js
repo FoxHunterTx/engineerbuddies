@@ -6,6 +6,10 @@ const publicController = require('../controller/public_controller');
 
 router.get('/nav/contact',publicController.getContactMePage); 
 
+router.get('/hamradio/mainpage',publicController.getHamRadioMainPage); 
+router.get('/hamradio/buildantenna',publicController.getHamRadioBuildAntenna);
+router.get('/hamradio/swr',publicController.getHamRadioSwr);
+
 router.get('/baking/yeastwater',publicController.getBakingYeastWater); 
 router.get('/baking/sourdough',publicController.getBakingSourDough); 
 

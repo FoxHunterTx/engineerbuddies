@@ -1,0 +1,50 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+    <body>
+        <%- include('../includes/navigation.ejs') %> 
+        <!-- Sidebar -->
+        <%- include('../includes/sidebar-hamradio.ejs') %>  
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>        
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Ham Radio</h1><br>
+        <h3 class='scout-h3'>Introduction</h3>
+        <p>For me, the first thought is when I hear 'Ham Radio' or more generic 'Amateur Radio', I think about the Titanic 
+          and its attempt to submit SOS calls through the air. We have come a long way since then and Amateur Radio has proofed 
+          to be a major player in today's emergency situations. Enjoying a hobby that also can save lifes is a big part of it why I love 
+          Ham Radio.
+         </p><br><br>
+         <h3 class='scout-h3'>What is Ham Radio</h3>
+         <p>
+           In short and on a high level, Amateur Radio is another wireless connection comparable to cell phones, walkie talkies and even 
+           Bluetooth devices when you look at the technical aspect of it. 
+           Radio communication works in a FCC assigned dedicated radio frequencies bandwidth to exchange radio data messages. 
+           Those data messages can be analog or digital depends on the used protocol. The communication is wireless between 
+           a transmitter and a receiver device. The communication via air is called 'Simplex' means only one party can speak at 
+           a time. As Ham Radios combine the transmitter and receiver called transceiver a communication in both direction
+           can take place. <br>
+         </p><br><br>
+       <h3 class='scout-h3'>My Journey</h3>
+        <p>Started my 'Ham Radio' journey by using personal radio services. While supporting local voluntering events
+          a short-range low-power communication radio helped to stay connected during the head quarter. 
+          As there are range limitations for the public usable walkie-talkies (Family Radio Service -FRS), extended
+          my communication range by getting a Gemeral Mobile GMRS licenses. <br>
+          But I always wanted to be able to talk to other radios further away than 2 miles
+          away. So, I started the Ham Radio journey in 2019. Still a newbie. 
+        </p>
+
+    </div>
+
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center"><image src="../images/hamradio-solar.jpeg" 
+        alt="build your own antenna" width="200" height="300"><br>Battery Charger<br>Using Solar Cells</image></p>
+  </div> 
+  </div>
+  <%- include('../includes/footer.ejs') %>
+</div>
+ <%- include('../includes/end.ejs') %>

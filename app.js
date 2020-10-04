@@ -8,7 +8,7 @@ let  FileStore = require('session-file-store')(session)
 const myUser = require('./util/users.json');
 
 const errorController = require('./controller/error_controller');
-const mongoConnect = require('./util/database').mongoConnect;
+// const mongoConnect = require('./util/database').mongoConnect;
 const User = require('./models/user');
 
 const app = express();

@@ -7,6 +7,34 @@ footer {
     color: #ffeb3b;
 }
 
+.scout-h3 {
+    background-color: lightgray;
+}
+
+.scout-indend-1 {
+    text-indent: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.scout-indent-2 {
+    text-indent: 60px;
+    margin: 0;
+    padding: 0;  
+}
+
+.scout-list {
+    color: black;
+}
+
+.scout-list ul{
+    width: 75%;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style-type:none;
+}
+
 .scout-center {
     text-align: center;
 }
